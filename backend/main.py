@@ -36,7 +36,8 @@ app.add_middleware(
         # "http://localhost:5173",
         # "http://31.129.43.117",
         "http://94.26.236.131",
-        "http://13cars.ru"
+        "http://13cars.ru",
+        "http://api.13cars.ru"
     ],
     allow_credentials=True,
     allow_methods=["*"],
