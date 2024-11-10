@@ -6,7 +6,7 @@ function App() {
   const [items, setItems] = useState(null)
 
   const fetchItems = () => {
-    axios.get('/api/items').then(r => {
+    axios.get("http://api.13cars.ru/items").then(r => {
       setItems(r.data)
     })
   }
