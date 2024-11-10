@@ -13,7 +13,8 @@ app.add_middleware(
         # "http://31.129.43.117",
         "http://94.26.236.131",
         "http://13cars.ru",
-        "http://api.13cars.ru"
+        "http://api.13cars.ru",
+        "https://api.13cars.ru"
     ],
     allow_credentials=True,
     allow_methods=["*"],
