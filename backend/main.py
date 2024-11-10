@@ -6,6 +6,21 @@ import uvicorn
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        # "http://localhost:5173",
+        # "http://31.129.43.117",
+        "http://94.26.236.131",
+        "http://13cars.ru",
+        "http://api.13cars.ru"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 @app.get("/items")
 def get_items():
@@ -28,21 +43,6 @@ def get_items():
     ]
     random.shuffle(items)
     return items
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        # "http://localhost:5173",
-        # "http://31.129.43.117",
-        "http://94.26.236.131",
-        "http://13cars.ru",
-        "http://api.13cars.ru"
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 
 if __name__ == "__main__":
